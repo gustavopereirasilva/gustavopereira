@@ -1,0 +1,69 @@
+Algoritmo "Projeto"
+
+Var
+   N3, N4, N5, N6, MEDIA1, MEDIA2, MEDIA3: Inteiro
+   OP, N1, N2, SOMA, SUB, DV, R1, R2, R3: Real
+
+Inicio
+   Repita
+      Escreval("Digite uma das opções a seguir: ")
+      Escreval("1. Soma")
+      Escreval("2. Subtração")
+      Escreval("3. Divisão")
+      Escreval("4. Faixa Etaria")
+      Escreval("5. Numeros Primos")
+      Escreval("6. Mudanca de Base ")
+      Escreval("7. Sair")
+      Leia(OP)
+
+      Se (OP=1) entao
+         Escreval("Digite dois numeros ")
+         Leia(N1,N2)
+         SOMA<-N1+N2
+         Escreval("A soma dos dois numeros e",SOMA)
+      Fimse
+
+      Se (OP=2) entao
+         Escreval("Digite dois numeros ")
+         Leia(N1,N2)
+         SUB<-N1-N2
+         Escreval("O resultado da subtracao e", SUB)
+      Fimse
+
+      Se (OP=3) entao
+         Escreval("Digite dois numeros ")
+         Leia(N1,N2)
+         DV<-N1/N2
+         Escreval("O resultado da divisao e",DV)
+
+// Opção 4 - O algoritmo aceita outros caracteres alem de f e m e quando nao selecionado nenhuma opção, o valor de 0 dando erro.
+//Sei que envolve algo como SEXO<> F e M mas não sei organizar esse algoritmo.
+//Opção 4 - Trava pela falta de um ate.
+         Se(OP=4) entao
+            Escreval ("Digite o numero de pessoas: ")
+            Leia(N3)
+            Para X de 1 ate N3 faca
+               Escreval("Digite a idade da pessoa", X, ": ")
+               Leia(N4)
+               Escreval("Digite o sexo da pessoa", X, ", m para masculino e f para feminino: ")
+               Leia(SEXO)
+               MEDIA1<-MEDIA1+N4
+               Se(SEXO="m") entao
+                  N5<-N5+1
+                  MEDIA2<-MEDIA2+N4
+               Fimse
+               Se(SEXO="f") entao
+                  N6<-N6+1
+                  MEDIA3<-MEDIA3+N4
+               Fimse
+            Fimpara
+            R1<-MEDIA1/N3
+            R2<-MEDIA2/N5
+            R3<-MEDIA3/N6
+            Escreval("A media da idade das pessoas digitadas e: ", R1)
+            Escreval("A media da idade das pessoas do sexo masculino e de: ",R2)
+            Escreval("A media da idade das pessoas do sexo feminino e de: ",R3)
+
+         Ate(OP=7)
+
+Fimalgoritmo
